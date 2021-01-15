@@ -4,7 +4,22 @@ toDoList = document.querySelector(".js-toDoList");
 
 const TODO_LS="toDos";
 
-const toDos=[];
+let toDos=[];
+
+//todo리스트 원소 삭제 event
+function deleteToDo(event){
+    const btn = event.target;
+    const li = btn.parentNode;
+    console.log(li);
+     //delete하는 id 리스트 제외하고 나머지 cleanToDos에 저장
+     const cleanToDos = toDos.filter(function(toDo) {
+        return toDo.id !== parseInt(li.id);
+    });
+    toDoList.removeChild(li);
+    toDos=cleanToDos;
+    console.log(toDos);
+    saveToDos();//localStorage 갱신
+}
 
 function saveToDos(){
 //localStorage에는 js 데이터를 저장할 수 없다.
@@ -22,9 +37,11 @@ function paintTodo(text){
 
     //값 입력
     delBtn.innerText="❌";
+    delBtn.addEventListener("click", deleteToDo);
     span.innerText=text;
     li.appendChild(span);
     li.appendChild(delBtn);
+    li.id=newId;
     toDoList.appendChild(li);
     const toDoObj={
         text: text,
