@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&family=Noto+Sans+KR:wght@100&display=swap');
+
+body{
+    background-color: white;
+}
+.btn{
+    cursor: pointer;
+}
+.js-clock h1{
+    color:white;
+    font-size:  80px;
+    display:flex;
+    justify-content: center;
+    padding-top:100px;
+}
+.js-greetings{
+    color:white;
+    font-size:40px;  
+    display:flex;
+    justify-content: center;
+
+}
+.js-form{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.js-toDoForm{
+    display:flex;
+    justify-content: center;
+
+}
+.js-toDoList{
+    /* width:300px; */
+    color:white;
+    display:table;
+    margin-left:auto;
+    margin-right:auto;
+}
+.js-weather{
+    display:table;
+    margin-left:auto;
+    margin-right:auto;
+    font-size:20px;
+    font-weight: 600;
+    font-style:italic;
+}
+.clicked{
+    color:#7f8c8d;
+}
+.input__target{
+    background:none;
+    appearance: none;
+    border:none;
+    border-bottom:3px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    font-size:36px;
+    color:white;
+}
+.input__target::placeholder {
+    color: white;
+    opacity: 0.7;
+  }
+
+.input__target:focus,
+.input__target:active {
+  outline: none;
+}
+.input__todo{
+    background:none;
+    appearance: none;
+    border:none;
+    border-bottom:3px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    font-size:36px;
+    color:white;
+}
+.input__todo::placeholder {
+    color: white;
+    opacity: 0.7;
+  }
+.input__todo:focus,
+.input__todo:active {
+  outline: none;
+}
+.form,.greetings {
+    display:none;
+}
+
+.showing{
+    display:flex;
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }to{
+        opacity:1;
+    }
+}
+.bgImage{
+
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index: -1;
+    animation:fadeIn 1s linear;
+}
+.js-weather{
+    color:white;
+    align-items: center;
+}
+.js-toDoList .del-btn{
+    background:none;
+    border:none;
+}

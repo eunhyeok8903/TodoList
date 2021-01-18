@@ -36,11 +36,14 @@ function paintTodo(text){
     const newId = toDos.length+1;
 
     //값 입력
-    delBtn.innerText="❌";
+    delBtn.innerText=" ❌";
     delBtn.addEventListener("click", deleteToDo);
+    delBtn.className="del-btn";
     span.innerText=text;
-    li.appendChild(span);
+    console.log(text);
+    
     li.appendChild(delBtn);
+    li.appendChild(span);
     li.id=newId;
     toDoList.appendChild(li);
     const toDoObj={

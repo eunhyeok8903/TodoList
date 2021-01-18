@@ -29,7 +29,7 @@ function askForName(){
 function paintGreeting(text){
     form.classList.remove(SHOWING_CN); //폼은 숨기고 (What is your name 폼 지워버림)
     greeting.classList.add(SHOWING_CN); // js-greeting h4 하위에 class showing추가
-    greeting.innerText=`Hello ${text}`;
+    greeting.innerText=`${text}`;
 }
 
 function loadName(){
