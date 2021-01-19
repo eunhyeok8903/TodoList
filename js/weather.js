@@ -12,7 +12,7 @@ function getWeather(lat,lng){
         const temperature = json.main.temp;
         const place = json.name;
         const country = json.sys.country;
-        weather.innerText=`${place} , ${country} / ${temperature}도 `;
+        weather.innerText=`${place} , ${country} | ${temperature}° `;
     });
 }
 

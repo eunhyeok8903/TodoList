@@ -12,6 +12,7 @@ body{
     display:flex;
     justify-content: center;
     padding-top:100px;
+    font-style:italic;
 }
 .js-greetings{
     color:white;
@@ -60,6 +61,7 @@ body{
 .input__target::placeholder {
     color: white;
     opacity: 0.7;
+    text-align: center;
   }
 
 .input__target:focus,
@@ -78,6 +80,7 @@ body{
 .input__todo::placeholder {
     color: white;
     opacity: 0.7;
+    text-align: center;
   }
 .input__todo:focus,
 .input__todo:active {
@@ -114,4 +117,8 @@ body{
 .js-toDoList .del-btn{
     background:none;
     border:none;
+}
+#todoSpan{
+    font-size:20px;
+    font-weight: bold;   
 }

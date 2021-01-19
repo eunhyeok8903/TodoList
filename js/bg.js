@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
 
-const IMG_NUMBER=6;
+const IMG_NUMBER=2;
 
 //1~IMG_NUMBER 숫자 반환 함수
 function getRandom(){
